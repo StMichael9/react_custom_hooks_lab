@@ -20,23 +20,3 @@ export function useLocalStorage(key, initialValue = null) {
 
   return [state, setState];
 }
-
-/*
-import { useEffect, useState } from "react";
-
-export function useLocalStorage(key, initialValue = null) {
-  const [state, setState] = useState(() => {
-    const localData = localStorage.getItem(key);
-    if (localData !== null) {
-      return localData; // no JSON.parse needed for strings
-    }
-    return initialValue;
-  });
-
-  useEffect(() => {
-    localStorage.setItem(key, state); // save raw string
-  }, [key, state]);
-
-  return [state, setState];
-}
-*/
